@@ -1,0 +1,8 @@
+Defaults badpass_message="Etes vous vraiment de 42 ?"
+Defaults requiretty
+Defaults log_input
+Defaults log_output
+Defaults iolog_dir=/var/log/sudo
+Defaults !compress_io
+Defaults logfile=/var/log/sudo.log
+Defaults secure_path="/usr/local/sbin:user/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin"
