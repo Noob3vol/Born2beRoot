@@ -29,7 +29,7 @@ chage -m 2 -M 30 root
 groupadd user42
 
 # Adding USER
-useradd $LOGIN -G user42 sudo
+useradd $LOGIN -G user42,sudo
 
 # Defining it's password
 echo "$PASS" | passwd --stdin $LOGIN
