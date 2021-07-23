@@ -25,6 +25,8 @@ cp login.defs /etc/login.defs
 chage -m 2 -M 30 root
 
 ## Account creation/modification
+# Add user42 group
+groupadd user42
 
 # Adding USER
 useradd $LOGIN -G user42 sudo
