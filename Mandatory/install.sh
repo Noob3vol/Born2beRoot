@@ -37,7 +37,7 @@ echo "$PASS" | passwd --stdin $LOGIN
 
 # Defining new password for root
 
-echo "$ROOT_PASS" | passwd --stdin
+echo "$ROOT_PASS" | passwd --stdin root
 
 #-------------------------------------------------------
 #-------------------------------------------------------
@@ -90,7 +90,7 @@ systemctl restart sshd
 
 cp monitoring.sh /root/monitoring.sh
 chmod +x /root/monitoring.sh
-echo "*/10 * * * * root /root/monitoring.sh"
+echo "*/10 * * * * root /root/monitoring.sh" > /etc/cron.d/monitoring
 
 #--------------------------------------------------
 #--------------------------------------------------
