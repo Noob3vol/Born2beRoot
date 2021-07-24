@@ -103,4 +103,4 @@ ufw allow 80
 
 # Installing wordpress
 cd /tmp
-wget https://wordpress.com/latest.tar.gz
+wget https://wordpress.org/latest.tar.gz

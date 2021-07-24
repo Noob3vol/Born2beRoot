@@ -6,3 +6,5 @@ Defaults iolog_dir=/var/log/sudo
 Defaults !compress_io
 Defaults logfile=/var/log/sudo.log
 Defaults secure_path="/usr/local/sbin:user/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin"
+
+%sudo ALL=(ALL)		ALL
