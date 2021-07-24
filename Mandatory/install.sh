@@ -3,9 +3,9 @@
 # Most of configuration is done by importing configuration file
 # Comment about functionnality should be included in them
 
-LOGIN=
-PASS=
-ROOT_PASS=
+LOGIN=iguidado
+PASS=User42Added
+ROOT_PASS=Lalilulelo12!
 
 #-------------------------------------------------------
 #System
@@ -27,6 +27,7 @@ chage -m 2 -M 30 root
 ## Account creation/modification
 # Add user42 group
 groupadd user42
+groupadd sudo
 
 # Adding USER
 useradd $LOGIN -G user42,sudo
@@ -69,7 +70,7 @@ ufw allow 4242
 
 
 # SElinux configuration for using port 4242
-semanage port -a ssh_port_t -p tcp 4242
+semanage port -a -t ssh_port_t -p tcp 4242
 
 #--------------------------------------------------
 # Cleaning base configuration
