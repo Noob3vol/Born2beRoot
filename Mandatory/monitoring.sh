@@ -36,6 +36,15 @@ MEM_PERC=$(echo "scale=2;${MEM_U} * 100 / ${MEM_T}" | bc)
 MESS+="#Memory usage: ${MEM_U}/${MEM_TOTAL} (${MEM_PERC}%)\n"
 
 #----------------------------------------------------------
+#Disk Usage
+
+DISK_TOTAL=$(df -h --total | grep total | tr -s " " | cut -d' ' -f 2)
+DISK_USE=$(df -m --total | grep total | tr -s " " | cut -d' ' -f 3)
+DISK_PERC=$(df -m --total | grep total | tr -s " " | cut -d' ' -f 5)
+
+MESS+="#Disk Usage : $DISK_USE/$DISK_TOTAL ($DISK_PERC)\n"
+
+#----------------------------------------------------------
 #Cpu usage
 
 CPU_U=$(top -b -n 1 | grep Cpu | sed "s/\ \+/\ /g" | cut -d' ' -f2)

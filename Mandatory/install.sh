@@ -39,6 +39,10 @@ echo "$PASS" | passwd --stdin $LOGIN
 
 echo "$ROOT_PASS" | passwd --stdin root
 
+#Defining new hostname
+hostnamectl ${LOGIN}42
+echo "${LOGIN}42" > /etc/hostname
+
 #-------------------------------------------------------
 #-------------------------------------------------------
 #Network
