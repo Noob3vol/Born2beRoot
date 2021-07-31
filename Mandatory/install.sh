@@ -100,11 +100,13 @@ echo "*/10 * * * * root /root/monitoring.sh" > /etc/cron.d/monitoring
 #--------------------------------------------------
 #Bonus
 ##Web server
+if [[ $1 == "bonus" ]]
+then
+	# Installing needed component
+	dnf install lighttpd mariadb mariadb-server -y
+	ufw allow 80
 
-# Installing needed component
-dnf install lighttpd mariadb mariadb-server -y
-ufw allow 80
-
-# Installing wordpress
-cd /tmp
-wget https://wordpress.org/latest.tar.gz
+	# Installing wordpress
+	cd /tmp
+	wget https://wordpress.org/latest.tar.gz
+fi

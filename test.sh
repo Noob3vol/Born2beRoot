@@ -14,9 +14,9 @@ sed -i "s/database_name_here/${DATABASE_NAME}/" /tmp/wordpress/wp-config-sample.
 sed -i "s/username_here/${DATABASE_USER}/" /tmp/wordpress/wp-config-sample.php
 sed -i "s/password_here/${DATABASE_PASS}/" /tmp/wordpress/wp-config-sample.php
 mv /tmp/wordpress/wp-config-sample.php /tmp/wordpress/wp-config.php
-cp -R wordpress/* /var/www/html
-chmod -R 755 /var/www/html
-chown lighttpd:lighttpd /var/www/html
+cp -R wordpress/* /var/www/lighttpd
+chmod -R 755 /var/www/lighttpd
+chown lighttpd:lighttpd /var/www/lighttpd
 
 # Clean MariaDB install
 systemctl start mariadb
