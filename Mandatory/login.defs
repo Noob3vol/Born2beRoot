@@ -39,7 +39,7 @@ HOME_MODE	0700
 PASS_MAX_DAYS	30
 PASS_MIN_DAYS	2
 PASS_MIN_LEN	5
-PASS_WARN_AGE	30
+PASS_WARN_AGE	7
 
 #
 # Min/max values for automatic uid selection in useradd
