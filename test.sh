@@ -4,6 +4,10 @@ DATABASE_PASS=born2beroot
 
 DATABASE_ROOT_PASS=NewRootPass
 
+dnf install lighttpd lighttpd-fastcgi -y
+dnf install php php-fpm php-gd php-mysqlnd -y
+dnf install php-zip php-curl php-mbstring php-bcmath php-soap -y
+dnf install mariadb mariadb-server -y
 
 cd /tmp
 #rm -f latest.tar.*
