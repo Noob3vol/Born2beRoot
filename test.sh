@@ -9,6 +9,16 @@ dnf install php php-fpm php-gd php-mysqlnd -y
 dnf install php-zip php-curl php-mbstring php-bcmath php-soap -y
 dnf install mariadb mariadb-server -y
 
+
+
+# Configure php
+sed -i "s/user = apache/user = lighttpd" /etc/php-fpm.d/www.conf
+sed -i "s/group = apache/group = lighttpd" /etc/php-fpm.d/www.conf
+user
+sed -i "s/#\(include \"conf.d/fastcgi.conf\"\)/\1/" /etc/lighttpd/module.conf
+
+
+# Configure wordpress
 cd /tmp
 #rm -f latest.tar.*
 #wget https://wordpress.org/latest.tar.gz
